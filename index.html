@@ -216,7 +216,7 @@
   <h1 class="hero-question" id="heroQuestion">Should a company keep its best employee if she's destroying the team?</h1>
   <p class="hero-sub">24 real dilemmas. One primary source, one live case, one recommendation you have to defend — session after session, in English you already own but rarely get to use properly.</p>
   <div class="hero-actions">
-    <a href="sessions/session-01.html" class="gold-btn">Open Case 01 →</a>
+    <a href="sessions/session-01.html" class="gold-btn">Start with Case 01 →</a>
     <a href="#cases" class="ghost-link">See all 24 cases</a>
   </div>
   <div class="scroll-cue" aria-hidden="true"><span class="line"></span> scroll</div>
@@ -257,7 +257,7 @@
         <div class="eyebrow" style="justify-content:flex-start;">The Archive</div>
         <h2>24 case files. One at a time.</h2>
       </div>
-      <div class="cases-count">01 OPEN · 23 IN SEQUENCE</div>
+      <div class="cases-count">02 OPEN · 22 IN SEQUENCE</div>
     </div>
     <div class="case-grid" id="caseGrid"></div>
   </div>
@@ -280,7 +280,7 @@
 </section>
 
 <section class="final-cta">
-  <h2>Case 01 is open. The other 23 stay sealed until you get there.</h2>
+  <h2>Two cases are open. The other 22 stay sealed until you get there.</h2>
   <p>No call, no form — just message me directly. Tell me where your English actually is, and I'll tell you honestly whether this archive is the right fit.</p>
   <a href="https://wa.me/905523778322" class="gold-btn">Message Me →</a>
 </section>
@@ -322,7 +322,7 @@
 
   const cases = [
     ["The Brilliant but Toxic Employee","Should a company keep an exceptionally productive employee whose behaviour damages the team?","Accountability & consequences", true],
-    ["The Cost of Avoiding Conflict","Does avoiding conflict protect relationships, or does it usually make problems worse?","Tension & resolution"],
+    ["The Cost of Avoiding Conflict","Does avoiding conflict protect relationships, or does it usually make problems worse?","Tension & resolution", true],
     ["Who Decides What Counts as Art?","Is artistic value determined by skill, intention, institutions or public reaction?","Interpretation & value"],
     ["Can Language Make a Country Feel Like Home?","Can learning a country's language create a genuine sense of belonging?","Identity & belonging"],
     ["Honesty, Tact and the Difficult Truth","When does professional honesty become unnecessary bluntness?","Feedback & tact"],
@@ -353,7 +353,7 @@
     const num = String(idx+1).padStart(2,'0');
     const card = document.createElement(isLive ? 'a' : 'div');
     card.className = 'case-card ' + (isLive ? 'live-card' : 'sealed-card');
-    if(isLive) card.href = 'sessions/session-01.html';
+    if(isLive) card.href = 'sessions/session-' + num + '.html';
     card.innerHTML = `
       <div class="top-row">
         <span class="case-num">CASE ${num}</span>
